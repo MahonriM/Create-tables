@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to create tables in Oracle and SQL Server?</title>
+</head>
+<body>
+    <form action="">
+        <ul>
+            <h1>Topics</h1>
+            <li><a href="#Introduction">Introduction</a></li>
+            <li><a href="#Create">Create a table in SQL Server</a></li>
+            <li><a href="#oraclecr">Create a table in Oracle</a></li>
+        </ul>
+        <h1>Welcome to my article</h1>
+        <label>Autor: Mahonri Martinez Date:02/01/2023</label>
+        <div id="Introduction">
+        <p>In this article. I am going to teach you about the creation of tables made with two different DBMS(DataBase Managment System)</p>
+        <h1>What is a table?</h1>
+        <p>Microsoft defines a table such as database objects that contain all the data in a database. In tables, data is logically organized in a row-and-column format similar to a spreadsheet. Each row represents a unique record, and each column represents a field in the record. For example, a table that contains employee data for a company might contain a row for each employee and columns representing employee information such as employee number, name, address, job title, and home telephone number.</p>
+        <p>Oralce defines a table such as the basic unit of data organization in an Oracle database.</p>
+        </div>
+        <br>
+        <h1>Before We start</h1>
+        <p>If We want to create a table, We first have to create a database.In both DBMS We can create in both DBMS a database by using the word create database NAMEOFDATABASE in oracle We add ; and SQL SERVER We do not need to use ;</p>
+       <div id="Create">
+        <h1>How to create a table in SQL Server?</h1>
+        <p>First We need to use the DDL command CREATE then We need to use the reserve word know as table then We add the name of the table then we use () inside the parentesis we put the 
+            name of the column and the data type. If We want to add more columns we just add a , and then the data type.
+        </p>
+        <p>We can add a Primary Key if we want to make connection between tables.</p>
+        <p>Example</p>
+        <br>
+        <code>
+    create table Anime(
+idanime int primary key,nombreanimne varchar(50))
+create table Genero
+(idgenero int primary key, nombre varchar(20) )
+        </code>
+        <p>In SQL Server we do not need to use the ; at the end of each sentence</p>
+        <br>
+    </div>
+    <br>
+    <div id="oraclecr">
+    <h1>Create a table in Oracle</h1>
+    <p>In Oracle We can create a table in the next way.</p>
+    <code>
+        CREATE TABLE Libro(
+    idlibro number not null,
+    Nombre varchar2(50) not null,
+    NumeroPaginas number not null,
+    Editorial varchar2(50) not null,
+    ano number not null,
+    CONSTRAINT PKLibroidlibro Primary Key(idlibro));
+    </code>
+    <p>One of the biggest differences between SQL Server and Oracle are the data types and the ;</p>
+    <p>In oracle we use the language PL/SQL while in SQL Server we use Transct-SQL</p>
+    </div>
+    </form>
+ </body>
+</html>
